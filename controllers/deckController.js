@@ -1,3 +1,4 @@
+const mongoose = require("mongoose")
 const Deck = require("../models/Deck");
 const { DEFAULT_CARDS, JOKERS, SUITS, VALUES, shuffle } = require('../helpers/deckHelpers')
 
@@ -40,19 +41,23 @@ module.exports = {
         }
     },
     existingDeckShuffle: async (req, res) => {
-        try {
-
-            let deckUpdate = await Deck.findOne({ id: req.params.id })
-            deckUpdate.stack = JSON.stringify(shuffle(JSON.parse(deckUpdate.stack)))
-            deckUpdate.shuffled = true
-            let savedDeck = await deckUpdate.save()
-            const { shuffled, remaining, _id } = savedDeck
-            res.json({ success: true, deck_id: _id, remaining, shuffled })
-            // console.log(savedDeck)
-            console.log(`🃏 Existing deck shuffled [id: ${_id}]`)
-
-        } catch (err) {
-            console.log(err);
+        if (req.params.id.length !== 24) {
+            res.status(500).json(`Invalid id: ${req.params.id}`)
+            console.log(`❌ Invalid id: ${req.params.id}`)
+        } else {
+            const deckId = mongoose.Types.ObjectId(req.params.id)
+            try {
+                let deckUpdate = await Deck.findById(deckId).exec()
+                deckUpdate.stack = JSON.stringify(shuffle(JSON.parse(deckUpdate.stack)))
+                deckUpdate.shuffled = true
+                let savedDeck = await deckUpdate.save()
+                const { shuffled, remaining, _id } = savedDeck
+                res.json({ success: true, deck_id: _id, remaining, shuffled })
+                console.log(`🃏 Existing deck shuffled [id: ${_id}]`)
+            } catch (err) {
+                res.status(404).json(`Deck id not found: ${req.params.id}`)
+                console.log(`❌ Deck id not found: ${req.params.id}`)
+            }
         }
     }
 }
