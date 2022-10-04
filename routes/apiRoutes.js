@@ -4,5 +4,6 @@ const deckController = require("../controllers/deckController")
 
 router.get("/new", deckController.newDeck)
 router.get("/new/shuffle", deckController.newDeckShuffled)
+router.get("/:id/shuffle", deckController.existingDeckShuffle)
 
 module.exports = router
