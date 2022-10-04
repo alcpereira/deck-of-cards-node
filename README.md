@@ -10,8 +10,8 @@ Implementation using Node/Express/MongoDB
 - [x] Implement MongoDB
 - [x] Implement Mongoose
 - [x] Add static files
-- [ ] Implement Mongoose Schemas
-- [ ] Add static files
+- [x] Implement Mongoose Schemas
+- [x] Add static files
 - [ ] Make docs
 
 ## Main features
