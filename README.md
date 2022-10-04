@@ -4,6 +4,5 @@
 [Original Github](https://github.com/crobertsbmw/deckofcards)
 
 ## TODO
-Todo 
-  - [x] Test
-  - [ ] Figure out how to 
+- [x] Test
+- [ ] Figure out how to 
