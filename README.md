@@ -5,12 +5,14 @@ Implementation using Node/Express/MongoDB
 
 ## TODO
 - [x] Setup basic Express
-- [ ] Insert features from original API into the TODOs
-- [ ] Structure as MVC
-- [ ] Make docs
-- [ ] Implement MongoDB
-- [ ] Implement Mongoose
+- [x] Insert features from original API into the TODOs
+- [x] Structure as MVC
+- [x] Implement MongoDB
+- [x] Implement Mongoose
 - [ ] Add static files
+- [ ] Implement Mongoose Schemas
+- [ ] Add static files
+- [ ] Make docs
 
 ## Main features
 - [ ] /api/deck/new/ - Create a non-shuffled new deck | Order: Ace, 2, 3... - Spades, diamonds, clubs, then hearts
