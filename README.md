@@ -15,7 +15,7 @@ Implementation using Node/Express/MongoDB
 - [ ] Make docs
 
 ## Main features
-- [ ] /api/deck/new/ - Create a non-shuffled new deck | Order: Ace, 2, 3... - Spades, diamonds, clubs, then hearts
+- [x] /api/deck/new/ - Create a non-shuffled new deck | Order: Ace, 2, 3... - Spades, diamonds, clubs, then hearts
 - [ ] /api/deck/new/shuffle/ - Create a shuffled new deck
 - [ ] /api/deck/:deck_id/shuffle/ - Shuffle an existing deck
 - [ ] /api/deck/:deck_id/draw/?count=:count - Draw card(s)
