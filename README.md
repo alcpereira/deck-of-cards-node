@@ -9,7 +9,7 @@ Implementation using Node/Express/MongoDB
 - [x] Structure as MVC
 - [x] Implement MongoDB
 - [x] Implement Mongoose
-- [ ] Add static files
+- [x] Add static files
 - [ ] Implement Mongoose Schemas
 - [ ] Add static files
 - [ ] Make docs
