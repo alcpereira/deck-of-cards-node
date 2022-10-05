@@ -39,13 +39,3 @@ module.exports = {
         return out
     }
 }
-
-let obj = [{
-    "code": "0D",
-    "image": "https://deckofcardsapi.com/static/img/0D.png",
-    "images": { "svg": "https://deckofcardsapi.com/static/img/0D.svg", "png": "https://deckofcardsapi.com/static/img/0D.png" },
-    "value": "10",
-    "suit": "DIAMONDS"
-},
-
-{ "code": "QC", "image": "https://deckofcardsapi.com/static/img/QC.png", "images": { "svg": "https://deckofcardsapi.com/static/img/QC.svg", "png": "https://deckofcardsapi.com/static/img/QC.png" }, "value": "QUEEN", "suit": "CLUBS" }]
